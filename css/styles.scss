@@ -62,6 +62,26 @@ img {
   transition: all 0.3s ease;
 }
 
+/* button */
+
+button {
+  border: 0;
+  background-color: $PrimaryBlue;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  @include transition;
+
+  &:hover {
+    background-color: lighten($PrimaryBlue, 20);
+    cursor: pointer;
+  }
+}
+
+.bold { font-weight: bold; }
+
+
 
 /* MENUBAR / NAV */
 #menu {
@@ -190,12 +210,13 @@ header {
 }
 
 .sections {
-  margin-#{$top}: $padding;
+  margin: $padding 0;
   display: flex;
   flex-wrap: wrap;
 
       section {
-        padding: $padding;
+        padding: 40px $padding;
+        margin-bottom: $padding;
         width: 100%;
         background-color: white;
         @include DropShadow;
@@ -204,8 +225,6 @@ header {
       }
 
         .visitors {
-
-
               display: flex;
               flex-wrap: wrap;
 
@@ -227,6 +246,135 @@ header {
 
 
         }
+
+        .top_selling {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          h2 {
+            margin-bottom: $padding;
+            width: 100%;
+          }
+
+          img {
+            margin-bottom: 10px;
+          }
+
+          .left {
+            text-align: left;
+          }
+
+          .right {
+            text-align: right;
+          }
+
+          p {
+            padding: 0;
+            width: 50%;
+
+          }
+
+        }
+
+        .sales {
+
+
+
+          .this_month {
+            margin-top: 15px;
+            background: lighten(#A3DD9F, 20);
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+
+            h2 {
+              font-size: 30px;
+            }
+          }
+
+          .fa-dollar-sign {
+            color: white;
+            background-color: #A3DD9F;
+            border-radius: 100%;
+            padding: 23px 30px;
+            margin-right: 10px;
+          }
+
+          .fa-arrow-up {
+            color: #A3DD9F;
+          }
+
+          table {
+            margin-top: 50px;
+            padding: 10px;
+            width: 100%;
+            font-size: 15px;
+            text-align: left;
+            text-transform: uppercase;
+            border-collapse: collapse;
+
+            th {
+              color: darken(#F8F8F8, 20);
+              padding: 0 0 3px 10px;
+            }
+
+            tr:not(:first-child) {
+              background-color: #F8F8F8;
+              border-bottom: 1px solid darken(#F8F8F8, 10);
+
+            }
+
+            tr:last-child {
+              border: 0;
+            }
+
+            td {
+              padding: 20px 10px;
+
+              .fa-user {
+                background-color: $PrimaryBlue;
+                padding: 7px;
+                margin-right: 5px;
+                color: white;
+              }
+            }
+          }
+
+
+        }
+
+      .sales_cat {
+
+        h2 {
+          margin-bottom: $padding;
+        }
+      }
+
+
+    .activities {
+
+      display: flex;
+      flex-wrap: wrap;
+
+      h2 {
+        width: 100%;
+      }
+
+      h3 {
+        width: 50%;
+
+
+        @extend .timestamp;
+      }
+
+
+
+
+    }
 
 
 

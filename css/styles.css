@@ -61,6 +61,26 @@ img {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
+/* button */
+button {
+  border: 0;
+  background-color: #63ABBC;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  button:hover {
+    background-color: #aad1db;
+    cursor: pointer; }
+
+.bold {
+  font-weight: bold; }
+
 /* MENUBAR / NAV */
 #menu {
   display: flex;
@@ -155,11 +175,12 @@ header {
       cursor: pointer; }
 
 .sections {
-  margin-top: 30px;
+  margin: 30px 0;
   display: flex;
   flex-wrap: wrap; }
   .sections section {
-    padding: 30px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
     width: 100%;
     background-color: white;
     -webkit-box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
@@ -179,5 +200,71 @@ header {
         color: #63ABBC; }
       .sections .visitors .gender .fa-square-full {
         padding-right: 5px; }
+  .sections .top_selling {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .sections .top_selling h2 {
+      margin-bottom: 30px;
+      width: 100%; }
+    .sections .top_selling img {
+      margin-bottom: 10px; }
+    .sections .top_selling .left {
+      text-align: left; }
+    .sections .top_selling .right {
+      text-align: right; }
+    .sections .top_selling p {
+      padding: 0;
+      width: 50%; }
+  .sections .sales .this_month {
+    margin-top: 15px;
+    background: #ebf8ea;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    text-align: left;
+    justify-content: center; }
+    .sections .sales .this_month h2 {
+      font-size: 30px; }
+  .sections .sales .fa-dollar-sign {
+    color: white;
+    background-color: #A3DD9F;
+    border-radius: 100%;
+    padding: 23px 30px;
+    margin-right: 10px; }
+  .sections .sales .fa-arrow-up {
+    color: #A3DD9F; }
+  .sections .sales table {
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    border-collapse: collapse; }
+    .sections .sales table th {
+      color: #c5c5c5;
+      padding: 0 0 3px 10px; }
+    .sections .sales table tr:not(:first-child) {
+      background-color: #F8F8F8;
+      border-bottom: 1px solid #dfdfdf; }
+    .sections .sales table tr:last-child {
+      border: 0; }
+    .sections .sales table td {
+      padding: 20px 10px; }
+      .sections .sales table td .fa-user {
+        background-color: #63ABBC;
+        padding: 7px;
+        margin-right: 5px;
+        color: white; }
+  .sections .sales_cat h2 {
+    margin-bottom: 30px; }
+  .sections .activities {
+    display: flex; }
+    .sections .activities h2 {
+      width: 100%; }
+    .sections .activities h3 {
+      width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
