@@ -238,10 +238,19 @@ header {
         justify-content: center;
       }
 
+
         .visitors {
               display: flex;
               flex-wrap: wrap;
             grid-area: visitors;
+
+          .tablet_pc {
+            display: none;
+          }
+
+          .mobile {
+            display:block;
+          }
 
               h2 {
                 width: 100%;

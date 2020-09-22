@@ -20,6 +20,24 @@
           width: calc(100% - 15px) !important;
         }
 
+        .visitors {
+          .mobile {
+            display: none;
+          }
+
+          .tablet_pc {
+            display: block;
+          }
+
+
+          align-content: flex-start;
+
+          h2 {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+        }
 
 
 
