@@ -79,6 +79,16 @@ button {
   }
 }
 
+.link {
+  color: $PrimaryBlue;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    color: darken($PrimaryBlue, 20);
+  }
+}
+
 .bold { font-weight: bold; }
 
 
@@ -359,20 +369,68 @@ header {
 
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
 
+      button {
+        margin: $padding auto 0 auto;
+      }
       h2 {
         width: 100%;
+        text-align: center;
       }
 
-      h3 {
+
+      h3, .timestamp {
+        margin-top: 50px;
         width: 50%;
 
-
-        @extend .timestamp;
+        .fa-user {
+          background-color: $PrimaryBlue;
+          padding: 6px 7px;
+          margin-right: 10px;
+          color: white;
+        }
       }
 
+      .timestamp { text-align: right; }
 
 
+    .activity {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 10px 0 0 45px;
+
+      .fa-plus-square, .fa-pen-square {
+        color: $PrimaryRed;
+        margin-right: 10px;
+      }
+
+      .preview {
+        width: 90%;
+        margin: 15px 0 0 0;
+        padding: 20px 15px;
+        border: solid 1px $PrimaryRed;
+
+        .price {
+          padding: 5px 10px;
+          text-transform: uppercase;
+          color:white;
+          background-color: $PrimaryRed;
+          font-weight: bold;
+        }
+
+        b {
+          text-transform: uppercase;
+        }
+
+        p {
+          margin-#{$top}:10px;
+        }
+      }
+    }
 
     }
 

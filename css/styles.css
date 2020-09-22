@@ -78,6 +78,17 @@ button {
     background-color: #aad1db;
     cursor: pointer; }
 
+.link {
+  color: #63ABBC;
+  text-decoration: none;
+  /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .link:hover {
+    color: #387381; }
+
 .bold {
   font-weight: bold; }
 
@@ -261,10 +272,48 @@ header {
   .sections .sales_cat h2 {
     margin-bottom: 30px; }
   .sections .activities {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; }
+    .sections .activities button {
+      margin: 30px auto 0 auto; }
     .sections .activities h2 {
-      width: 100%; }
-    .sections .activities h3 {
+      width: 100%;
+      text-align: center; }
+    .sections .activities h3, .sections .activities .timestamp {
+      margin-top: 50px;
       width: 50%; }
+      .sections .activities h3 .fa-user, .sections .activities .timestamp .fa-user {
+        background-color: #63ABBC;
+        padding: 6px 7px;
+        margin-right: 10px;
+        color: white; }
+    .sections .activities .timestamp {
+      text-align: right; }
+    .sections .activities .activity {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 10px 0 0 45px; }
+      .sections .activities .activity .fa-plus-square, .sections .activities .activity .fa-pen-square {
+        color: #D69094;
+        margin-right: 10px; }
+      .sections .activities .activity .preview {
+        width: 90%;
+        margin: 15px 0 0 0;
+        padding: 20px 15px;
+        border: solid 1px #D69094; }
+        .sections .activities .activity .preview .price {
+          padding: 5px 10px;
+          text-transform: uppercase;
+          color: white;
+          background-color: #D69094;
+          font-weight: bold; }
+        .sections .activities .activity .preview b {
+          text-transform: uppercase; }
+        .sections .activities .activity .preview p {
+          margin-top: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
