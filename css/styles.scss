@@ -1,6 +1,4 @@
 @import "variables"; /* VARIABLER */
-@import "tablet"; /* STYLING TIL TABLET */
-@import "computer"; /* STYLING TIL COMPUTER */
 
 @mixin transition() { /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
   -webkit-transition: all 0.3s ease;
@@ -220,9 +218,15 @@ header {
 }
 
 .sections {
+  display: grid;
   margin: $padding 0;
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+          "visitors"
+          "top_sales"
+          "sales"
+          "sales_cat"
+          "activity";
 
       section {
         padding: 40px $padding;
@@ -237,6 +241,7 @@ header {
         .visitors {
               display: flex;
               flex-wrap: wrap;
+            grid-area: visitors;
 
               h2 {
                 width: 100%;
@@ -262,6 +267,7 @@ header {
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
+          grid-area: top_sales;
 
           h2 {
             margin-bottom: $padding;
@@ -289,6 +295,7 @@ header {
         }
 
         .sales {
+          grid-area: sales;
 
 
 
@@ -359,6 +366,8 @@ header {
 
       .sales_cat {
 
+        grid-area: sales_cat;
+
         h2 {
           margin-bottom: $padding;
         }
@@ -366,7 +375,7 @@ header {
 
 
     .activities {
-
+      grid-area: activity;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -437,4 +446,9 @@ header {
 
 
 }
+
+
+
+@import "tablet"; /* STYLING TIL TABLET */
+@import "computer"; /* STYLING TIL COMPUTER */
 
