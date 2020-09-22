@@ -2,6 +2,13 @@
 @import "tablet"; /* STYLING TIL TABLET */
 @import "computer"; /* STYLING TIL COMPUTER */
 
+@mixin transition() { /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 * { /* Gælder alt på hele siden */
   box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen, padding mv. */
   font-family: sans-serif;
@@ -45,4 +52,79 @@ img {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-} 
+}
+
+
+/* MENUBAR / NAV */
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid lightgray;
+  font-size: 16px;
+
+  .logo_menu {
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    color: $PrimaryGray;
+
+    &:hover {
+      color: $PrimaryBlue;
+      cursor: pointer;
+    }
+  }
+
+  .menu_item {
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $PrimaryGray;
+        font-weight: 600;
+
+        @include transition;
+
+        &:hover {
+          text-decoration: none;
+          color: $PrimaryBlue;
+
+          @include transition;
+        }
+      }
+  }
+
+  .burger_menu {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    align-self: center;
+
+    .fa-bars {
+      font-size:23px;
+      color: #504f4d;
+    }
+  } /* Burger menu */
+
+
+  .toggle {
+    display: none;
+    text-align: right;
+    width: 100%;
+    line-height: 50px;
+    margin-#{$top}: 20px;
+    padding: 0 30px 20px 20px;
+  }
+
+
+  /* only for pc */
+  .pc_menu {
+    display: none; /* skjuler PC menu */
+  }
+
+  .user_menu {
+    display: none;
+  }
+
+}

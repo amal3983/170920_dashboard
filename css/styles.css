@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* VARIABLER KAN SAMLES HER */
+/* VARIABLER */
+/* VARIABLER KAN SAMLES HER */
+/* VARIABLER */
+/* STYLING TIL TABLET */
+/* VARIABLER KAN SAMLES HER */
+/* VARIABLER */
+/* STYLING TIL COMPUTER */
 * {
   /* Gælder alt på hele siden */
   box-sizing: border-box;
@@ -49,5 +57,63 @@ img {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+
+/* MENUBAR / NAV */
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid lightgray;
+  font-size: 16px;
+  /* Burger menu */
+  /* only for pc */ }
+  #menu .logo_menu {
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    color: #69696E; }
+    #menu .logo_menu:hover {
+      color: #63ABBC;
+      cursor: pointer; }
+  #menu .menu_item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #69696E;
+    font-weight: 600;
+    /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    #menu .menu_item a:hover {
+      text-decoration: none;
+      color: #63ABBC;
+      /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+  #menu .burger_menu {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    align-self: center; }
+    #menu .burger_menu .fa-bars {
+      font-size: 23px;
+      color: #504f4d; }
+  #menu .toggle {
+    display: none;
+    text-align: right;
+    width: 100%;
+    line-height: 50px;
+    margin-top: 20px;
+    padding: 0 30px 20px 20px; }
+  #menu .pc_menu {
+    display: none;
+    /* skjuler PC menu */ }
+  #menu .user_menu {
+    display: none; }
 
 /*# sourceMappingURL=styles.css.map */

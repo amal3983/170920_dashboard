@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title>paztel  |  admin</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
@@ -19,6 +19,8 @@
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!-- Font Awesome link -->
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,11 +29,58 @@
 <!-- i <body> har man alt indhold på siden som brugeren kan se -->
 <body>
 
+<!-- MENUBAR / NAV -->
+<nav id="menu">
+
+    <div class="logo_menu transition">
+        paztel
+    </div>
+
+    <!-- BURGER MENU -->
+    <div class="burger_menu"><i class="fas fa-bars transition"></i></div>
+
+    <div class="toggle">
+        <div class="menu_item"><a href="#">Dashboard</a></div>
+        <div class="menu_item"><a href="#"><i>•</i> Messages</a></div>
+        <div class="menu_item"><a href="#">Products</a></div>
+        <div class="menu_item"><a href="#"><i>•</i>Posts</a></div>
+        <div class="menu_item"><a href="#">Staff</a></div>
+        <div class="menu_item"><a href="#">Settings</a></div>
+        <div class="menu_item"><a href="#">USER</a></div>
+    </div>
+
+    <!-- PC MENU -->
+    <div class="pc_menu">
+        <div class="menu_item"><a href="#">Dashboard</a></div>
+        <div class="menu_item"><a href="#">Messages</a></div>
+        <div class="menu_item"><a href="#">Products</a></div>
+        <div class="menu_item"><a href="#">Posts</a></div>
+        <div class="menu_item"><a href="#">Staff</a></div>
+        <div class="menu_item"><a href="#">Settings</a></div>
+    </div>
+
+    <div class="user_menu transition">
+        <b>user</b>
+    </div>
+</nav>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
     $(function () {
+
+        $(function () {
+
+            /* BURGER MENU TOGGLE */
+            $(".burger_menu").click(function () {
+                $(".toggle").slideToggle(100);
+                /* Når der klikkes på .burger_menu (burger menu ikon), aktivere .toggle (menupunkter) */
+            });
+
+
+
+        });
 
     });
 
