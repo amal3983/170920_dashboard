@@ -23,11 +23,13 @@
 body {
 margin: 0; /* Ingen kanter i siden af browser */
   background-color: #F8F8F8;
+  color: $PrimaryGray;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; /* Ingen ydre margen fra overskrifter */
   padding: 0; /* Ingen indre margen fra overskrifter */
+  text-transform: uppercase;
 }
 
 ul, ol {
@@ -66,7 +68,7 @@ img {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding: 30px;
+  padding: $padding;
   flex-wrap: wrap;
   @include DropShadow;
   font-size: 16px;
@@ -75,7 +77,6 @@ img {
     font-size: 30px;
     font-weight: bold;
     align-self: center;
-    color: $PrimaryGray;
 
     &:hover {
       color: $PrimaryBlue;
@@ -86,7 +87,6 @@ img {
   .menu_item {
       a {
         text-decoration: none;
-        color: $PrimaryGray;
 
         @include transition;
 
@@ -147,3 +147,88 @@ img {
   }
 
 }
+
+/* WRAPPER */
+#wrapper {
+  padding: $padding;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: $PrimaryRed;
+  @include DropShadow;
+  padding: 50px 30px;
+  color: white;
+  text-align: center;
+
+  h1 {
+    line-height: 40px;
+  }
+
+  p {
+    padding: 20px 0 15px 0;
+  }
+
+  button {
+    border: 0;
+    background-color: white;
+    color: $PrimaryRed;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    @include transition;
+
+    &:hover {
+      background-color: lighten($PrimaryRed, 20);
+      cursor: pointer;
+    }
+  }
+}
+
+.sections {
+  margin-#{$top}: $padding;
+  display: flex;
+  flex-wrap: wrap;
+
+      section {
+        padding: $padding;
+        width: 100%;
+        background-color: white;
+        @include DropShadow;
+        text-align: center;
+        justify-content: center;
+      }
+
+        .visitors {
+
+
+              display: flex;
+              flex-wrap: wrap;
+
+              h2 {
+                width: 100%;
+              }
+
+              .gender {
+                  padding: 20px;
+
+                  .red { color: $PrimaryRed; }
+                  .blue { color: $PrimaryBlue; }
+
+                  .fa-square-full {
+                    padding-#{$right}: 5px;
+
+                  }
+              }
+
+
+        }
+
+
+
+}
+
