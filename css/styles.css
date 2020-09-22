@@ -92,6 +92,13 @@ img {
   #menu .menu_item .fa-circle {
     color: #63ABBC;
     padding-right: 5px; }
+  #menu .menu_item:last-child {
+    padding-top: 20px; }
+  #menu .fa-user {
+    padding: 20px;
+    background-color: lightgray;
+    margin-right: 20px;
+    color: white; }
   #menu .burger_menu {
     display: block;
     text-align: right;

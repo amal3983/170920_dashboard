@@ -101,6 +101,17 @@ img {
         padding-#{$right}: 5px;
 
       }
+
+    &:last-child {
+      padding-#{$top}: 20px;
+    }
+  }
+
+  .fa-user {
+    padding: 20px;
+    background-color: lightgray;
+    margin-#{$right}:20px;
+    color: white;
   }
 
   .burger_menu {
