@@ -9,6 +9,11 @@
   transition: all 0.3s ease;
 }
 
+@mixin DropShadow() {
+  -webkit-box-shadow: 3px 3px 3px 0 rgba(0,0,0,.2);
+  box-shadow: 3px 3px 3px 0 rgba(0,0,0,.2);
+}
+
 * { /* Gælder alt på hele siden */
   box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen, padding mv. */
   font-family: sans-serif;
@@ -62,7 +67,7 @@ img {
   background-color: white;
   padding: 30px;
   flex-wrap: wrap;
-  border-bottom: 1px solid lightgray;
+  @include DropShadow;
   font-size: 16px;
 
   .logo_menu {
@@ -79,19 +84,22 @@ img {
 
   .menu_item {
       a {
-        text-transform: uppercase;
         text-decoration: none;
         color: $PrimaryGray;
-        font-weight: 600;
 
         @include transition;
 
-        &:hover {
-          text-decoration: none;
-          color: $PrimaryBlue;
+            &:hover {
+              text-decoration: none;
+              color: $PrimaryBlue;
 
-          @include transition;
-        }
+            }
+      }
+
+      .fa-circle {
+        color: $PrimaryBlue;
+        padding-#{$right}: 5px;
+
       }
   }
 
@@ -112,9 +120,8 @@ img {
     display: none;
     text-align: right;
     width: 100%;
-    line-height: 50px;
+    line-height: 55px;
     margin-#{$top}: 20px;
-    padding: 0 30px 20px 20px;
   }
 
 

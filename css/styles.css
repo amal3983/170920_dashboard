@@ -65,7 +65,8 @@ img {
   background-color: white;
   padding: 30px;
   flex-wrap: wrap;
-  border-bottom: 1px solid lightgray;
+  -webkit-box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
   font-size: 16px;
   /* Burger menu */
   /* only for pc */ }
@@ -78,10 +79,8 @@ img {
       color: #63ABBC;
       cursor: pointer; }
   #menu .menu_item a {
-    text-transform: uppercase;
     text-decoration: none;
     color: #69696E;
-    font-weight: 600;
     /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -89,12 +88,10 @@ img {
     transition: all 0.3s ease; }
     #menu .menu_item a:hover {
       text-decoration: none;
-      color: #63ABBC;
-      /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      color: #63ABBC; }
+  #menu .menu_item .fa-circle {
+    color: #63ABBC;
+    padding-right: 5px; }
   #menu .burger_menu {
     display: block;
     text-align: right;
@@ -107,9 +104,8 @@ img {
     display: none;
     text-align: right;
     width: 100%;
-    line-height: 50px;
-    margin-top: 20px;
-    padding: 0 30px 20px 20px; }
+    line-height: 55px;
+    margin-top: 20px; }
   #menu .pc_menu {
     display: none;
     /* skjuler PC menu */ }
