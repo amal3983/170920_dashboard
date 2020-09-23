@@ -82,7 +82,8 @@ button {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .link:hover {
-    color: #387381; }
+    color: #387381;
+    cursor: pointer; }
 
 .bold {
   font-weight: bold; }
@@ -94,6 +95,8 @@ button {
   background-color: white;
   padding: 30px;
   flex-wrap: wrap;
+  top: 0;
+  position: sticky;
   -webkit-box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
   font-size: 16px;
@@ -108,6 +111,7 @@ button {
       cursor: pointer; }
   #menu .menu_item a {
     text-decoration: none;
+    color: #69696E;
     /* Inkluder en transition, ved at skrive " @include transition ". Kort og let! */
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -354,6 +358,36 @@ header {
 /* VARIABLER KAN SAMLES HER */
 /* MEDIA QUERIES */
 /* VARIABLER */
+@media screen and (min-width: 1200px) {
+  #wrapper {
+    padding: 30px 180px; }
+  header {
+    padding: 200px 30px; }
+  section {
+    align-content: flex-start; }
+  .activities .preview {
+    margin-bottom: 30px !important; }
+  .sales_t {
+    padding: 20px 0; }
+  td {
+    padding: 20px 10px !important; }
+  /* MENUBAR / NAV */
+  .menu_item {
+    padding-left: 50px;
+    align-self: center; }
+    .menu_item:last-child {
+      padding-top: 0 !important; }
+  #menu {
+    padding: 30px 180px;
+    /* skjuler burger menu */ }
+    #menu .pc_menu {
+      display: flex;
+      align-content: center; }
+    #menu .user_menu {
+      display: block !important; }
+    #menu .burger_menu, #menu .toggle {
+      display: none; } }
+
 /* STYLING TIL COMPUTER */
 
 /*# sourceMappingURL=styles.css.map */

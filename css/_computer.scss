@@ -3,4 +3,70 @@
 
 @media #{$computer} {
 
+  #wrapper {
+    padding: $padding $padding * 6;
+  }
+
+  header {
+    padding: 50px * 4 30px;
+  }
+
+
+  section {
+    align-content: flex-start;
+  }
+
+  .activities
+  {
+    .preview {
+
+      margin-#{$bottom}:30px !important;
+
+    }
+  }
+
+  .sales_t {
+    padding: 20px 0;
+  }
+
+  td {
+    padding: 20px 10px !important;
+  }
+
+  /* MENUBAR / NAV */
+
+
+
+
+  .menu_item {
+    padding-left:50px;
+    align-self: center;
+
+    &:last-child {
+      padding-#{$top}: 0 !important;
+    }
+  }
+
+  #menu {
+    padding: $padding $padding * 6;
+
+
+    .pc_menu {
+      display: flex;
+      align-content: center;
+
+
+    }
+
+    .user_menu {
+      display: block !important;
+    }
+
+    .burger_menu, .toggle {
+      display: none;
+    } /* skjuler burger menu */
+  }
+
+
+
 }
