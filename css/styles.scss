@@ -404,7 +404,7 @@ header {
       }
 
 
-      h3, .timestamp {
+      h3 {
         margin-top: 50px;
         width: 50%;
 
@@ -416,7 +416,9 @@ header {
         }
       }
 
-      .timestamp { text-align: right; }
+      .timestamp {
+        @extend h3;
+        text-align: right; }
 
 
     .activity {
@@ -425,9 +427,13 @@ header {
       align-items: center;
       margin: 10px 0 0 45px;
 
-      .fa-plus-square, .fa-pen-square {
+      .fa-plus-square {
         color: $PrimaryRed;
         margin-right: 10px;
+      }
+
+      .fa-pen-square {
+        @extend .fa-plus-square;
       }
 
       .preview {
